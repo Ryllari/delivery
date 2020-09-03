@@ -23,6 +23,9 @@ class Motoboy:
     def is_exclusive_to(self, market_id) -> bool:
         return market_id in self.exclusive_to
 
+    def has_exclusive(self):
+        return bool(self.exclusive_to)
+
     def as_dict(self):
         return {
             'motoboy_id': self.id,

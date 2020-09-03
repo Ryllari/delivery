@@ -5,6 +5,8 @@ def search_exclusive(moto_list, market_id):
     for moto in moto_list:
         if moto.is_exclusive_to(market_id):
             return moto
+        elif moto.has_exclusive():
+            moto_list.remove(moto)
     return choice(moto_list)
 
 
